@@ -1,0 +1,1778 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peter Plaza — Junior Technical SEO &amp; Website Optimization</title>
+<meta name="description" content="Junior Technical SEO &amp; website optimization specialist. I audit websites for speed, crawl and indexation problems and write clear, prioritised fix lists. Available for freelance audits, internships and junior SEO roles.">
+<meta name="keywords" content="junior technical SEO, website optimization, core web vitals, site speed audit, crawl and indexation, SEO freelancer, SEO internship">
+<meta name="author" content="Peter Plaza">
+<meta name="robots" content="index, follow">
+<!--
+  NOTE: no canonical / og:url / og:image / twitter:image yet, because there is
+  no live domain. Those tags need an ABSOLUTE public URL, so they cannot be
+  filled in correctly until this site is deployed somewhere. Add them then.
+-->
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Peter Plaza — Junior Technical SEO &amp; Website Optimization">
+<meta property="og:description" content="I audit websites for speed, crawl and indexation problems and write clear, prioritised fix lists. Open to freelance audits, internships and junior SEO roles.">
+<meta name="twitter:card" content="summary">
+<!-- og:image + twitter:image removed: they require an absolute public URL.
+     Re-add once the site has a domain, pointing at /img/peter-plaza.jpg -->
+
+<!-- Favicon (inline, no extra file needed) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%230f766e'/><text x='50' y='68' font-size='52' font-family='Segoe UI' font-weight='700' fill='white' text-anchor='middle'>S</text></svg>">
+
+<!-- Bootstrap 5.3 CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!--
+=====================================================================
+  QUICK EDIT LIST
+  ------------------------------------------------------------------
+  ALREADY FILLED IN:
+     Name    Peter Plaza
+     Email   fututana@gmail.com
+     Phone   +63 921 364 5286  (Philippines)
+     Country Philippines
+     Photo   img/peter-plaza.jpg  (your onlinejobs.ph headshot,
+             re-encoded PNG->JPEG: 64KB -> 10KB. If you get a
+             better photo, drop it in and update the 2 <img>
+             tags in the hero and the resume header.)
+
+  REMOVED ON PURPOSE - do not add back without the real thing:
+     - LinkedIn / X / GitHub links   (no accounts yet)
+     - canonical, og:url, og:image, twitter:image
+     - website link in the resume + print footer
+     - JSON-LD "url" and "sameAs"
+     These need a real, live account or a real domain. Broken
+     placeholders are worse than nothing.
+
+  STILL TO DO  (find & replace):
+  1.  School Name            -> your secondary school + year
+  2.  img/client-1..3.jpg    -> real photos (currently stock strangers)
+  3.  The 4 practice audits  -> replace with your own real audits
+  4.  Client scope list      -> make specific to what you ACTUALLY did
+                                  for Sole Special Foot Care
+  5.  Feedback quotes        -> replace with real mentor/peer feedback
+  6.  Skills + tool chips    -> keep only what you have actually used
+  7.  Certifications         -> keep ONLY courses you have completed
+  8.  form action            -> your Formspree / Getform endpoint
+
+  WHEN YOU GET A DOMAIN, add back to <head>:
+     <link rel="canonical" href="https://yourdomain.com/">
+     <meta property="og:url" content="https://yourdomain.com/">
+     <meta property="og:image" content="https://yourdomain.com/img/peter-plaza.jpg">
+     <meta name="twitter:image" content="https://yourdomain.com/img/peter-plaza.jpg">
+     and "url" back into the JSON-LD block at the bottom.
+     Also consider a sitemap.xml and robots.txt at that point.
+
+  NOTE ON THE CLIENT SECTION (#clients):
+  The Sole Special Foot Care findings are things that are real and
+  verifiable (a live /drafthomepage/ duplicate, service-area canonical
+  risk, and the site being offline). The "scope of my SEO work" list is
+  currently the service CATEGORIES, not your specific tasks - rewrite
+  it so each bullet matches something you actually did.
+
+  HONESTY NOTE: everything on this page is written to match a JUNIOR
+  level, not a senior one. Before you send this to a client, delete
+  anything you have not personally done. A junior who is honest about
+  being junior gets hired; a junior who overclaims gets caught.
+=====================================================================
+-->
+
+<style>
+/* ===================== DESIGN TOKENS ===================== */
+:root{
+  --brand:#0f766e;
+  --brand-2:#14b8a6;
+  --brand-soft:rgba(20,184,166,.10);
+  --accent:#f59e0b;
+  --ink:#0f172a;
+  --muted:#64748b;
+  --line:#e2e8f0;
+  --card:#ffffff;
+  --bg:#f8fafc;
+  --radius:18px;
+  --shadow-sm:0 1px 2px rgba(15,23,42,.06),0 1px 3px rgba(15,23,42,.04);
+  --shadow-md:0 10px 30px -12px rgba(15,23,42,.18);
+  --shadow-lg:0 30px 60px -25px rgba(15,23,42,.28);
+}
+[data-bs-theme="dark"]{
+  --ink:#e2e8f0;
+  --muted:#94a3b8;
+  --line:#1e293b;
+  --card:#111827;
+  --bg:#0b1220;
+  --brand:#2dd4bf;
+  --brand-2:#5eead4;
+  --brand-soft:rgba(45,212,191,.12);
+  --shadow-md:0 10px 30px -12px rgba(0,0,0,.6);
+  --shadow-lg:0 30px 60px -25px rgba(0,0,0,.7);
+}
+
+body{
+  font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4,h5,.font-title{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:800;letter-spacing:-.02em;}
+.text-muted-2{color:var(--muted)!important;}
+
+/* ===================== NAVBAR ===================== */
+.navbar{background:color-mix(in srgb,var(--card) 85%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
+.navbar .navbar-brand{font-family:'Plus Jakarta Sans';font-weight:800;letter-spacing:-.02em;}
+.brand-dot{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;font-size:.95rem;
+  box-shadow:0 6px 16px -6px var(--brand);}
+.nav-link{font-weight:500;font-size:.95rem;color:var(--muted);padding:.5rem .8rem!important;border-radius:10px;transition:.2s;}
+.nav-link:hover{color:var(--ink);background:var(--brand-soft);}
+.nav-link.active{color:var(--brand);background:var(--brand-soft);font-weight:600;}
+.icon-btn{width:40px;height:40px;border-radius:12px;border:1px solid var(--line);background:var(--card);
+  display:grid;place-items:center;color:var(--ink);transition:.2s;}
+.icon-btn:hover{border-color:var(--brand);color:var(--brand);transform:translateY(-1px);}
+
+/* ===================== BUTTONS ===================== */
+.btn{border-radius:12px;font-weight:600;padding:.65rem 1.25rem;transition:.2s;letter-spacing:-.01em;}
+.btn-brand{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;border:0;box-shadow:0 10px 22px -12px var(--brand);}
+.btn-brand:hover{color:#fff;transform:translateY(-2px);box-shadow:0 16px 30px -14px var(--brand);}
+.btn-outline-ink{border:1.5px solid var(--line);color:var(--ink);background:var(--card);}
+.btn-outline-ink:hover{border-color:var(--brand);color:var(--brand);background:var(--brand-soft);}
+[data-bs-theme="dark"] .btn-brand{color:#062a26;}
+
+/* ===================== HERO ===================== */
+.hero{position:relative;overflow:hidden;padding:calc(72px + 4rem) 0 68px;}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;
+  background:
+   radial-gradient(760px 380px at 12% 8%,var(--brand-soft),transparent 62%),
+   radial-gradient(620px 340px at 88% 4%,rgba(245,158,11,.14),transparent 60%);}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.35;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:52px 52px;
+  -webkit-mask-image:radial-gradient(ellipse 78% 62% at 50% 32%,#000 40%,transparent 100%);
+          mask-image:radial-gradient(ellipse 78% 62% at 50% 32%,#000 40%,transparent 100%);}
+.eyebrow{display:inline-flex;align-items-center:center;gap:.5rem;background:var(--brand-soft);color:var(--brand);
+  border:1px solid color-mix(in srgb,var(--brand) 30%,transparent);
+  padding:.42rem .9rem;border-radius:999px;font-size:.8rem;font-weight:600;letter-spacing:.01em;}
+.gradient-text{background:linear-gradient(120deg,var(--brand),var(--brand-2) 55%,var(--accent));
+  -webkit-background-clip:text;background-clip:text;color:transparent;}
+
+.stat-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;}
+.stat-strip > div{background:var(--card);padding:1.15rem 1rem;text-align:center;}
+.stat-strip .num{font-family:'Plus Jakarta Sans';font-size:1.7rem;font-weight:800;color:var(--brand);line-height:1.2;}
+.stat-strip .lbl{font-size:.76rem;color:var(--muted);font-weight:500;text-transform:uppercase;letter-spacing:.06em;}
+
+/* honest "currently" panel in the hero card */
+.now-list li{font-size:.86rem;color:var(--muted);padding:.2rem 0 .2rem 1.4rem;position:relative;list-style:none;}
+.now-list li::before{content:"\F28A";font-family:"bootstrap-icons";position:absolute;left:0;color:var(--brand);font-size:.8rem;top:.34rem;}
+
+/* ===================== CARDS ===================== */
+.card-clean{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-sm);}
+.card-clean.hoverable{transition:.25s cubic-bezier(.2,.7,.3,1);}
+.card-clean.hoverable:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:color-mix(in srgb,var(--brand) 35%,var(--line));}
+.icon-box{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;font-size:1.35rem;
+  background:var(--brand-soft);color:var(--brand);flex:0 0 auto;}
+.icon-box.amber{background:rgba(245,158,11,.14);color:#b45309;}
+[data-bs-theme="dark"] .icon-box.amber{color:#fbbf24;}
+
+.section{padding:76px 0;}
+.section-alt{background:color-mix(in srgb,var(--card) 55%,var(--bg));border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.section-label{font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brand);}
+h2.sec-title{font-size:clamp(1.6rem,3.4vw,2.35rem);}
+.lead-muted{color:var(--muted);max-width:640px;}
+
+/* ===================== SERVICES ===================== */
+.svc-list li{list-style:none;padding:.3rem 0 .3rem 1.6rem;position:relative;color:var(--muted);font-size:.92rem;}
+.svc-list li::before{content:"\F26E";font-family:"bootstrap-icons";position:absolute;left:0;color:var(--brand);font-size:.8rem;top:.42rem;}
+
+/* ===================== TOOLS ===================== */
+.filter-pill{border:1.5px solid var(--line);background:var(--card);color:var(--muted);
+  border-radius:999px;padding:.42rem 1rem;font-size:.85rem;font-weight:600;transition:.2s;}
+.filter-pill:hover{border-color:var(--brand);color:var(--brand);}
+.filter-pill.active{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;border-color:transparent;}
+[data-bs-theme="dark"] .filter-pill.active{color:#062a26;}
+.tool-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.05rem;height:100%;
+  transition:.22s cubic-bezier(.2,.7,.3,1);}
+.tool-card:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--brand) 40%,var(--line));box-shadow:var(--shadow-md);}
+.tool-ico{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;font-size:1.05rem;
+  background:var(--brand-soft);color:var(--brand);}
+.tool-card h6{font-size:.94rem;margin:0;font-weight:700;}
+.tool-card .cat{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;font-weight:600;}
+.tool-tag{position:absolute;top:.85rem;right:.9rem;font-size:.68rem;font-weight:700;letter-spacing:.04em;
+  color:#b45309;background:rgba(245,158,11,.15);padding:.18rem .5rem;border-radius:6px;}
+[data-bs-theme="dark"] .tool-tag{color:#fbbf24;}
+.tool-tag.learn{color:#6366f1;background:rgba(99,102,241,.14);}
+[data-bs-theme="dark"] .tool-tag.learn{color:#a5b4fc;}
+.hide{display:none!important;}
+
+/* ===================== PRACTICE AUDITS ===================== */
+.audit-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);transition:.25s;height:100%;display:flex;flex-direction:column;}
+.audit-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);}
+.audit-body{padding:1.35rem 1.35rem 1.1rem;flex:1 1 auto;}
+.audit-finding{display:flex;gap:.6rem;align-items:flex-start;font-size:.87rem;color:var(--muted);
+  padding:.5rem 0;border-top:1px dashed var(--line);}
+.audit-finding i{color:var(--brand);font-size:.9rem;margin-top:.15rem;flex:0 0 auto;}
+.audit-finding b{color:var(--ink);font-weight:700;}
+.audit-foot{padding:.7rem 1.35rem;background:color-mix(in srgb,var(--brand-soft) 55%,var(--card));
+  border-top:1px solid var(--line);font-size:.8rem;color:var(--muted);}
+.audit-foot b{color:var(--brand);}
+
+/* ===================== CLIENT FEATURE ===================== */
+.client-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);overflow:hidden;}
+.client-head{padding:1.6rem;background:
+  linear-gradient(135deg,color-mix(in srgb,var(--brand) 12%,var(--card)),var(--card));
+  border-bottom:1px solid var(--line);}
+.client-mono{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;flex:0 0 auto;
+  font-family:'Plus Jakarta Sans';font-weight:800;font-size:1.15rem;color:#fff;
+  background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:0 8px 18px -8px var(--brand);}
+.client-meta{display:flex;flex-wrap:wrap;gap:.4rem .5rem;margin-top:.9rem;}
+.client-chip{font-size:.74rem;font-weight:600;background:var(--card);border:1px solid var(--line);
+  color:var(--muted);padding:.24rem .6rem;border-radius:999px;}
+.client-body{padding:1.6rem;}
+.client-sub{font-size:.76rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--brand);
+  margin-bottom:.6rem;display:flex;align-items:center;gap:.45rem;}
+.client-scope li{list-style:none;position:relative;padding:.32rem 0 .32rem 1.6rem;font-size:.9rem;color:var(--muted);}
+.client-scope li::before{content:"\F26E";font-family:"bootstrap-icons";position:absolute;left:0;
+  color:var(--brand);font-size:.8rem;top:.44rem;}
+.finding{background:var(--card);border:1px solid var(--line);border-left-width:4px;border-radius:12px;padding:.9rem 1.05rem;}
+.finding.high{border-left-color:#dc2626;}
+.finding.med{border-left-color:#f59e0b;}
+.finding.good{border-left-color:#16a34a;}
+.finding .f-head{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-bottom:.3rem;}
+.finding .f-sev{font-size:.66rem;font-weight:800;letter-spacing:.06em;padding:.16rem .5rem;border-radius:5px;}
+.finding.high .f-sev{background:rgba(220,38,38,.12);color:#dc2626;}
+.finding.med  .f-sev{background:rgba(245,158,11,.16);color:#b45309;}
+.finding.good .f-sev{background:rgba(22,163,74,.14);color:#15803d;}
+[data-bs-theme="dark"] .finding.med .f-sev{color:#fbbf24;}
+[data-bs-theme="dark"] .finding.high .f-sev{color:#f87171;}
+.finding h6{font-size:.92rem;margin:0;font-weight:700;}
+.finding p{font-size:.85rem;color:var(--muted);margin:0;}
+.finding code{font-size:.82em;background:var(--bg);border:1px solid var(--line);
+  padding:.05rem .32rem;border-radius:5px;color:var(--brand);}
+.status-bar{display:flex;gap:.7rem;align-items:flex-start;padding:.85rem 1.05rem;border-radius:12px;
+  background:rgba(220,38,38,.07);border:1px solid rgba(220,38,38,.25);font-size:.86rem;color:var(--muted);}
+.status-bar i{color:#dc2626;font-size:1.05rem;flex:0 0 auto;margin-top:.1rem;}
+[data-bs-theme="dark"] .status-bar{background:rgba(248,113,113,.10);border-color:rgba(248,113,113,.3);}
+[data-bs-theme="dark"] .status-bar i{color:#f87171;}
+
+/* ===================== PROCESS ===================== */
+.step{position:relative;padding-left:3.6rem;padding-bottom:1.9rem;}
+.step:last-child{padding-bottom:0;}
+.step::before{content:attr(data-n);position:absolute;left:0;top:0;width:38px;height:38px;border-radius:12px;
+  display:grid;place-items:center;font-weight:800;font-size:.9rem;color:#fff;
+  background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:0 8px 18px -8px var(--brand);}
+.step::after{content:"";position:absolute;left:18.5px;top:44px;bottom:6px;width:2px;
+  background:linear-gradient(var(--line),transparent);}
+.step:last-child::after{display:none;}
+
+/* ===================== FEEDBACK ===================== */
+.avatar-initials{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-weight:800;
+  color:#fff;background:linear-gradient(135deg,var(--brand),var(--brand-2));flex:0 0 auto;font-size:.95rem;}
+.avatar-photo{width:46px;height:46px;border-radius:50%;object-fit:cover;flex:0 0 auto;
+  background:var(--brand-soft);border:2px solid var(--card);box-shadow:0 0 0 1px var(--line);
+  transition:.25s cubic-bezier(.2,.7,.3,1);}
+.avatar-photo:hover{transform:scale(1.08);box-shadow:0 0 0 2px var(--brand);}
+.avatar-wrap{position:relative;width:46px;height:46px;flex:0 0 auto;}
+.avatar-wrap .avatar-photo{position:absolute;inset:0;width:100%;height:100%;}
+.avatar-wrap .avatar-initials{width:100%;height:100%;}
+.avatar-wrap:has(img:not([data-loaded="1"])) .avatar-initials{display:grid;}
+.avatar-wrap:has(img[data-loaded="1"]) .avatar-initials{display:none;}
+.stars{color:var(--accent);font-size:.9rem;letter-spacing:2px;}
+
+/* ===================== RESUME ===================== */
+.resume-shell{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow-lg);overflow:hidden;}
+.resume-bar{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;
+  padding:.9rem 1.25rem;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--brand-soft) 60%,var(--card));}
+.resume-paper{padding:2.2rem;background:#fff;color:#0f172a;}
+.resume-head{border-bottom:2.5px solid #0f766e;padding-bottom:1rem;margin-bottom:1.4rem;}
+.resume-head h3{margin:0;font-size:1.85rem;letter-spacing:-.02em;color:#0f172a;}
+.resume-role{color:#0f766e;font-weight:600;font-size:.98rem;margin-top:.15rem;}
+.resume-contact{font-size:.82rem;color:#475569;display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;margin-top:.6rem;}
+.resume-contact i{color:#0f766e;}
+.resume-grid{display:grid;grid-template-columns:1fr 1.65fr;gap:1.9rem;}
+.r-block{margin-bottom:1.15rem;}
+.r-block:last-child{margin-bottom:0;}
+.r-title{font-size:.76rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:#0f766e;
+  padding-bottom:.35rem;border-bottom:1px solid #e2e8f0;margin-bottom:.65rem;}
+.r-skill{display:flex;justify-content:space-between;gap:.6rem;font-size:.83rem;padding:.28rem 0;
+  border-bottom:1px dashed #e8edf3;}
+.r-skill span:last-child{color:#64748b;font-weight:600;flex:0 0 auto;}
+.r-skillbar{height:5px;border-radius:99px;background:#e2e8f0;overflow:hidden;margin-top:.22rem;}
+.r-skillbar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#0f766e,#14b8a6);}
+.r-item{margin-bottom:.85rem;}
+.r-item:last-child{margin-bottom:0;}
+.r-item h6{font-size:.9rem;margin:0 0 .1rem;font-weight:700;color:#0f172a;}
+.r-item .r-date{font-size:.74rem;color:#0f766e;font-weight:600;}
+.r-item p{font-size:.83rem;color:#475569;margin:.28rem 0 0;}
+.r-item ul{font-size:.83rem;color:#475569;margin:.3rem 0 0;padding-left:1.05rem;}
+.r-item li{margin-bottom:.2rem;}
+.r-chips{display:flex;flex-wrap:wrap;gap:.35rem;}
+.r-chip{font-size:.74rem;font-weight:600;background:#f1f5f9;color:#0f766e;border:1px solid #dbe4ec;
+  padding:.22rem .55rem;border-radius:6px;}
+.r-chip.learning{background:#eef2ff;color:#4338ca;border-color:#e0e7ff;}
+.r-note{font-size:.78rem;color:#64748b;background:#f8fafc;border-left:3px solid #14b8a6;
+  padding:.5rem .7rem;margin:.3rem 0 0;}
+
+.print-only{display:none;font-size:8pt;color:#64748b;margin-bottom:8px;
+  border-bottom:1px solid #e2e8f0;padding-bottom:4px;}
+section[id],header[id]{scroll-margin-top:84px;}
+
+/* ===================== FAQ ===================== */
+.accordion-item{background:var(--card);border:1px solid var(--line);border-radius:14px!important;
+  margin-bottom:.7rem;overflow:hidden;}
+.accordion-item:has(.accordion-button:not(.collapsed)){border-color:color-mix(in srgb,var(--brand) 40%,var(--line));}
+.accordion-button{background:transparent;color:var(--ink);font-weight:600;font-size:.95rem;padding:1rem 1.1rem;box-shadow:none!important;}
+.accordion-button:not(.collapsed){color:var(--brand);background:var(--brand-soft);}
+.accordion-button:focus{box-shadow:none;}
+.accordion-body{color:var(--muted);font-size:.92rem;padding:.2rem 1.1rem 1.1rem;}
+
+/* ===================== CONTACT ===================== */
+.form-control,.form-select{background:var(--card);border:1.5px solid var(--line);border-radius:12px;
+  color:var(--ink);padding:.7rem .9rem;font-size:.94rem;}
+.form-control:focus,.form-select:focus{border-color:var(--brand);box-shadow:0 0 0 4px var(--brand-soft);background:var(--card);color:var(--ink);}
+.form-control::placeholder{color:var(--muted);opacity:.75;}
+.contact-tile{display:flex;gap:.85rem;align-items:flex-start;padding:.9rem;border:1px solid var(--line);
+  border-radius:14px;background:var(--card);transition:.2s;height:100%;}
+.contact-tile:hover{border-color:var(--brand);transform:translateY(-3px);box-shadow:var(--shadow-sm);}
+.contact-tile .lbl{font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:700;}
+
+/* ===================== FOOTER ===================== */
+footer{background:var(--card);border-top:1px solid var(--line);padding:44px 0 26px;}
+.social-btn{width:38px;height:38px;border-radius:11px;border:1px solid var(--line);display:grid;place-items:center;
+  color:var(--muted);transition:.2s;}
+.social-btn:hover{color:#fff;background:linear-gradient(135deg,var(--brand),var(--brand-2));border-color:transparent;transform:translateY(-2px);}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width:991.98px){
+  .resume-grid{grid-template-columns:1fr;}
+  .section{padding:60px 0;}
+  .hero{padding-top:6.5rem;}
+}
+@media (max-width:575.98px){
+  .stat-strip{grid-template-columns:repeat(2,1fr);}
+  .resume-paper{padding:1.35rem;}
+  .step{padding-left:3rem;}
+  .step::before{width:32px;height:32px;font-size:.82rem;}
+  .step::after{left:15.5px;top:38px;}
+}
+
+/* ==================================================================
+  PRINT STYLES  ->  "Download PDF" produces a clean A4 resume
+================================================================== */
+@media print{
+  @page{size:A4;margin:12mm 12mm;}
+  html,body{background:#fff!important;color:#000!important;font-size:10.6pt;}
+  .no-print{display:none!important;}
+  /* safety net: only the resume section may reach the printer */
+  body > *:not(#resume){display:none!important;}
+  #resume{display:block!important;padding:0!important;}
+  .resume-shell{box-shadow:none!important;border:0!important;border-radius:0!important;}
+  .resume-paper{padding:0!important;}
+  .print-only{display:block!important;}
+  a{text-decoration:none!important;color:#0f766e!important;}
+  .r-block,.r-item{page-break-inside:avoid;break-inside:avoid;}
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================= NAVBAR ============================= -->
+<nav class="navbar navbar-expand-lg sticky-top no-print" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#top">
+      <span class="brand-dot"><i class="bi bi-graph-up-arrow"></i></span>
+      <span>Peter&nbsp;Plaza</span>
+    </a>
+    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
+      <i class="bi bi-list fs-3"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tools">Tools</a></li>
+        <li class="nav-item"><a class="nav-link" href="#audits">Practice Work</a></li>
+        <li class="nav-item"><a class="nav-link" href="#clients">Client Work</a></li>
+        <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
+        <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode"><i class="bi bi-moon-stars"></i></button>
+        <a href="#contact" class="btn btn-brand btn-sm px-3">Get a Free Audit <i class="bi bi-arrow-right ms-1"></i></a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================= HERO ============================= -->
+<header class="hero" id="top">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7">
+        <span class="eyebrow mb-3"><span class="pulse-dot"></span> Junior SEO &mdash; open to freelance work and internships</span>
+        <h1 class="display-4 mb-3" style="font-size:clamp(2.1rem,5.4vw,3.5rem)">
+          Junior Technical SEO &amp;<br>Website Optimization
+        </h1>
+        <p class="lead lead-muted mb-4">
+          I'm early in my SEO career and I say that up front. What I bring is
+          <strong class="gradient-text">thoroughness and honesty</strong> &mdash; I crawl your site properly, document every issue,
+          and hand you a prioritised fix list in plain English. Cheaper than an agency, and I'll learn your stack fast.
+        </p>
+
+        <div class="d-flex flex-wrap gap-2 mb-4">
+          <a href="#contact" class="btn btn-brand"><i class="bi bi-clipboard2-pulse me-2"></i>Request a Free Site Audit</a>
+          <a href="#resume" class="btn btn-outline-ink"><i class="bi bi-file-earmark-person me-2"></i>View Resume</a>
+          <button class="btn btn-outline-ink" data-print-resume><i class="bi bi-download me-2"></i>Download PDF</button>
+        </div>
+
+        <div class="d-flex flex-wrap gap-4 small text-muted-2">
+          <span class="d-inline-flex align-items-center gap-2"><i class="bi bi-shield-check text-success"></i> No inflated claims</span>
+          <span class="d-inline-flex align-items-center gap-2"><i class="bi bi-journal-text text-success"></i> Every report in writing</span>
+          <span class="d-inline-flex align-items-center gap-2"><i class="bi bi-mortarboard text-success"></i> Still in full-time course</span>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="card-clean p-4">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div class="avatar-wrap" style="width:58px;height:58px">
+              <div class="avatar-initials" style="width:100%;height:100%;font-size:1.2rem">PP</div>
+              <img class="avatar-photo" src="img/peter-plaza.jpg" alt="Peter Plaza, Junior Technical SEO and website optimization specialist"
+                   width="58" height="58" decoding="async" fetchpriority="high">
+            </div>
+            <div>
+              <div class="fw-bold" style="font-size:1.05rem">Peter Plaza</div>
+              <div class="small text-muted-2">Junior Technical SEO &mdash; Trainee</div>
+            </div>
+            <span class="badge ms-auto rounded-pill text-bg-success-subtle text-success-emphasis border border-success-subtle">
+              <i class="bi bi-circle-fill me-1" style="font-size:.5rem;vertical-align:middle"></i>Available
+            </span>
+          </div>
+
+          <div class="stat-strip">
+            <div><div class="num"><span class="count" data-target="1">0</span>+</div><div class="lbl">Yr. learning</div></div>
+            <div><div class="num"><span class="count" data-target="15">0</span>+</div><div class="lbl">Audits run</div></div>
+            <div><div class="num"><span class="count" data-target="8">0</span>+</div><div class="lbl">Tools used</div></div>
+            <div><div class="num"><span class="count" data-target="100">0</span>%</div><div class="lbl">Written up</div></div>
+          </div>
+
+          <div class="mt-3">
+            <div class="small fw-bold mb-2"><i class="bi bi-hourglass-split me-1" style="color:var(--brand)"></i>Where I am right now</div>
+            <ul class="now-list list-unstyled mb-0 ps-0">
+              <li>Studying <strong>Science &amp; Technology (Programming)</strong> at Emmanuel John Institute</li>
+              <li>Building a full-time career in SEO &mdash; open to a junior role or internship</li>
+              <li>Taking on small freelance audits to build real project experience</li>
+            </ul>
+          </div>
+
+          <div class="alert alert-light border mt-3 mb-0 small py-2 px-3" style="background:var(--brand-soft);border-color:color-mix(in srgb,var(--brand) 25%,transparent)!important;color:var(--muted)">
+            <i class="bi bi-info-circle me-1" style="color:var(--brand)"></i>
+            I don't have years of agency experience yet &mdash; but I document my work, show my reasoning, and never guess.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============================= SERVICES ============================= -->
+<section class="section section-alt" id="services">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-label mb-2">What I do</div>
+      <h2 class="sec-title">Services I Can Take On</h2>
+      <p class="lead-muted mx-auto mt-2">Focused on the technical fundamentals, delivered as a written report you can act on.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card-clean hoverable h-100 p-4">
+          <div class="icon-box mb-3"><i class="bi bi-clipboard2-data"></i></div>
+          <h3 class="h5 mb-2">Technical SEO Audit</h3>
+          <p class="small text-muted-2 mb-3">A full crawl of your site, checked against what Google actually needs &mdash; delivered as a prioritised checklist.</p>
+          <ul class="svc-list mb-0 ps-0">
+            <li>Crawl &amp; indexation review</li>
+            <li>Broken links &amp; redirect chains</li>
+            <li>Duplicate &amp; thin page checks</li>
+            <li>Prioritised fix list with effort estimates</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card-clean hoverable h-100 p-4">
+          <div class="icon-box mb-3"><i class="bi bi-speedometer2"></i></div>
+          <h3 class="h5 mb-2">Speed &amp; Core Web Vitals</h3>
+          <p class="small text-muted-2 mb-3">I find what's making pages slow and explain the fix in language a developer can act on directly.</p>
+          <ul class="svc-list mb-0 ps-0">
+            <li>LCP, INP &amp; CLS diagnosis</li>
+            <li>Render-blocking CSS / JS spotted</li>
+            <li>Oversized image &amp; font findings</li>
+            <li>Caching &amp; compression checks</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card-clean hoverable h-100 p-4">
+          <div class="icon-box mb-3"><i class="bi bi-diagram-3"></i></div>
+          <h3 class="h5 mb-2">Site Structure Review</h3>
+          <p class="small text-muted-2 mb-3">Checking whether important pages are actually reachable and linked sensibly from the rest of the site.</p>
+          <ul class="svc-list mb-0 ps-0">
+            <li>Internal link mapping</li>
+            <li>Orphan &amp; deep page detection</li>
+            <li>URL structure suggestions</li>
+            <li>Breadcrumb &amp; pagination review</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card-clean hoverable h-100 p-4">
+          <div class="icon-box mb-3"><i class="bi bi-boxes"></i></div>
+          <h3 class="h5 mb-2">Schema Markup Setup</h3>
+          <p class="small text-muted-2 mb-3">Adding and validating structured data for products, articles, FAQs and local businesses.</p>
+          <ul class="svc-list mb-0 ps-0">
+            <li>JSON-LD implementation</li>
+            <li>Rich Results Test validation</li>
+            <li>FAQ &amp; LocalBusiness schema</li>
+            <li>Guidance for your developer</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card-clean hoverable h-100 p-4">
+          <div class="icon-box mb-3"><i class="bi bi-globe2"></i></div>
+          <h3 class="h5 mb-2">On-Page SEO Checks</h3>
+          <p class="small text-muted-2 mb-3">Titles, meta descriptions, headings, image alt text and keyword placement across your key pages.</p>
+          <ul class="svc-list mb-0 ps-0">
+            <li>Title &amp; meta description review</li>
+            <li>Heading hierarchy fixes</li>
+            <li>Image alt text coverage</li>
+            <li>robots.txt &amp; meta robots review</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card-clean hoverable h-100 p-4">
+          <div class="icon-box amber mb-3"><i class="bi bi-graph-up-arrow"></i></div>
+          <h3 class="h5 mb-2">GA4 &amp; Search Console Setup</h3>
+          <p class="small text-muted-2 mb-3">Getting your tracking working properly so you can actually see what changed after fixes go live.</p>
+          <ul class="svc-list mb-0 ps-0">
+            <li>Property &amp; account setup</li>
+            <li>Conversion &amp; event tracking</li>
+            <li>Search Console verification</li>
+            <li>Simple reporting dashboard</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= TOOLS ============================= -->
+<section class="section" id="tools">
+  <div class="container">
+    <div class="text-center mb-4">
+      <div class="section-label mb-2">Toolkit</div>
+      <h2 class="sec-title">Tools I Use &amp; Am Learning</h2>
+      <p class="lead-muted mx-auto mt-2">A proper audit needs more than one tool. Amber = core tools I use regularly. Indigo = tools I'm still learning.</p>
+    </div>
+
+    <div class="d-flex flex-wrap justify-content-center gap-2 mb-4 no-print" id="toolFilters">
+      <button class="filter-pill active" data-filter="all">All Tools</button>
+      <button class="filter-pill" data-filter="data">Data &amp; Analytics</button>
+      <button class="filter-pill" data-filter="crawl">Crawling &amp; Audit</button>
+      <button class="filter-pill" data-filter="perf">Performance</button>
+      <button class="filter-pill" data-filter="dev">Dev &amp; Debugging</button>
+      <button class="filter-pill" data-filter="schema">Schema &amp; Validation</button>
+    </div>
+
+    <div class="row g-3" id="toolGrid">
+
+      <div class="col-6 col-md-4 col-lg-3" data-cat="data">
+        <div class="tool-card position-relative">
+          <span class="tool-tag">CORE</span>
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <div class="tool-ico"><i class="bi bi-search"></i></div>
+            <div class="cat">Data</div>
+          </div>
+          <h6>Google Search Console</h6>
+          <p class="small text-muted-2 mb-0">Index coverage, Core Web Vitals, manual actions.</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3" data-cat="data">
+        <div class="tool-card position-relative">
+          <span class="tool-tag">CORE</span>
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <div class="tool-ico"><i class="bi bi-bar-chart-line"></i></div>
+            <div class="cat">Data</div>
+          </div>
+          <h6>Google Analytics 4</h6>
+          <p class="small text-muted-2 mb-0">Traffic, conversions and engagement reports.</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3" data-cat="perf">
+        <div class="tool-card position-relative">
+          <span class="tool-tag">CORE</span>
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <div class="tool-ico"><i class="bi bi-speedometer"></i></div>
+            <div class="cat">Performance</div>
+          </div>
+          <h6>PageSpeed Insights</h6>
+          <p class="small text-muted-2 mb-0">Field and lab data for CWV diagnosis.</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3" data-cat="dev">
+        <div class="tool-card position-relative">
+          <span class="tool-tag">CORE</span>
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <div class="tool-ico"><i class="bi bi-lightning-charge"></i></div>
+            <div class="cat">Performance</div>
+          </div>
+          <h6>Chrome Lighthouse</h6>
+          <p class="small text-muted-2 mb-0">Performance, SEO and a11y audits.</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3" data-cat="schema">
+        <div class="tool-card position-relative">
+          <span class="tool-tag">CORE</span>
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <div class="tool-ico"><i class="bi bi-braces-asterisk"></i></div>
+            <div class="cat">Schema</div>
+          </div>
+          <h6>Rich Results Test</h6>
+          <p class="small text-muted-2 mb-0">Validating structured data before shipping.</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3" data-cat="crawl">
+        <div class="tool-card position-relative">
+          <span class="tool-tag">CORE</span>
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <div class="tool-ico"><i class="bi bi-spider"></i></div>
+            <div class="cat">Crawling</div>
+          </div>
+          <h6>Screaming Frog</h6>
+          <p class="small text-muted-2 mb-0">Redirects, canonicals, duplication, status codes.</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3" data-cat="crawl">
+        <div class="tool-card position-relative">
+          <span class="tool-tag learn">LEARNING</span>
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <div class="tool-ico"><i class="bi bi-bug"></i></div>
+            <div class="cat">Crawling</div>
+          </div>
+          <h6>Sitebulb</h6>
+          <p class="small text-muted-2 mb-0">Cloud crawls with JavaScript rendering.</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3" data-cat="seo">
+        <div class="tool-card position-relative">
+          <span class="tool-tag learn">LEARNING</span>
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <div class="tool-ico"><i class="bi bi-triangle"></i></div>
+            <div class="cat">SEO</div>
+          </div>
+          <h6>Ahrefs</h6>
+          <p class="small text-muted-2 mb-0">Site audit, backlinks, keyword research.</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3" data-cat="seo">
+        <div class="tool-card position-relative">
+          <span class="tool-tag learn">LEARNING</span>
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <div class="tool-ico"><i class="bi bi-megaphone"></i></div>
+            <div class="cat">SEO</div>
+          </div>
+          <h6>Semrush</h6>
+          <p class="small text-muted-2 mb-0">Audits, rank tracking, competitor review.</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3" data-cat="dev">
+        <div class="tool-card position-relative">
+          <span class="tool-tag">CORE</span>
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <div class="tool-ico"><i class="bi bi-code-square"></i></div>
+            <div class="cat">Dev</div>
+          </div>
+          <h6>Chrome DevTools</h6>
+          <p class="small text-muted-2 mb-0">Network, Elements, Coverage, render tests.</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3" data-cat="schema">
+        <div class="tool-card position-relative">
+          <span class="tool-tag">CORE</span>
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <div class="tool-ico"><i class="bi bi-check2-square"></i></div>
+            <div class="cat">Validation</div>
+          </div>
+          <h6>Schema Markup Validator</h6>
+          <p class="small text-muted-2 mb-0">Checking JSON-LD syntax is correct.</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3" data-cat="dev">
+        <div class="tool-card position-relative">
+          <span class="tool-tag">CORE</span>
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <div class="tool-ico"><i class="bi bi-filetype-html"></i></div>
+            <div class="cat">Dev</div>
+          </div>
+          <h6>W3C Markup Validator</h6>
+          <p class="small text-muted-2 mb-0">HTML and CSS errors on your pages.</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3" data-cat="data">
+        <div class="tool-card position-relative">
+          <span class="tool-tag learn">LEARNING</span>
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <div class="tool-ico"><i class="bi bi-binoculars"></i></div>
+            <div class="cat">Data</div>
+          </div>
+          <h6>Chrome UX Report</h6>
+          <p class="small text-muted-2 mb-0">Real-user field data (CrUX).</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3" data-cat="crawl">
+        <div class="tool-card position-relative">
+          <span class="tool-tag learn">LEARNING</span>
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <div class="tool-ico"><i class="bi bi-file-earmark-spreadsheet"></i></div>
+            <div class="cat">Crawling</div>
+          </div>
+          <h6>Log File Analyser</h6>
+          <p class="small text-muted-2 mb-0">Bot crawl behaviour and crawl budget.</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3" data-cat="perf">
+        <div class="tool-card position-relative">
+          <span class="tool-tag learn">LEARNING</span>
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <div class="tool-ico"><i class="bi bi-stopwatch"></i></div>
+            <div class="cat">Performance</div>
+          </div>
+          <h6>WebPageTest</h6>
+          <p class="small text-muted-2 mb-0">Waterfall analysis and repeat testing.</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3" data-cat="data">
+        <div class="tool-card position-relative">
+          <span class="tool-tag learn">LEARNING</span>
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <div class="tool-ico"><i class="bi bi-table"></i></div>
+            <div class="cat">Data</div>
+          </div>
+          <h6>Looker Studio</h6>
+          <p class="small text-muted-2 mb-0">Simple client reporting dashboards.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="text-center small text-muted-2 mt-4 mb-0">
+      <i class="bi bi-info-circle me-1"></i> I cross-check every finding in at least two tools — a score from one platform is never a diagnosis.
+    </p>
+  </div>
+</section>
+
+<!-- ============================= PRACTICE AUDITS ============================= -->
+<section class="section section-alt" id="audits">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-label mb-2">Practice work</div>
+      <h2 class="sec-title">Audits I've Run &mdash; For Learning</h2>
+      <p class="lead-muted mx-auto mt-2">
+        These are self-initiated practice audits I ran to build my skills. I'm not claiming client results &mdash;
+        what matters here is the technical thinking: what I found, and what I would recommend.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="audit-card">
+          <div class="audit-body">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge rounded-pill text-bg-success-subtle text-success-emphasis border border-success-subtle">E-commerce</span>
+              <span class="small text-muted-2">Shopify store &middot; ~12,000 URLs</span>
+            </div>
+            <h3 class="h5 mb-2">Duplicate product URLs &amp; faceted navigation</h3>
+            <p class="small text-muted-2 mb-3">Ran a full Screaming Frog crawl to find how much of this store Google was wasting effort on.</p>
+            <div class="audit-finding"><i class="bi bi-exclamation-triangle"></i><span><b>4,200+</b> near-duplicate product URLs from filter and sort parameters</span></div>
+            <div class="audit-finding"><i class="bi bi-exclamation-triangle"></i><span><b>38</b> redirect chains, some going 4+ hops</span></div>
+            <div class="audit-finding"><i class="bi bi-exclamation-triangle"></i><span>Missing <b>canonical tags</b> on collection and variant pages</span></div>
+          </div>
+          <div class="audit-foot">
+            <b>Recommended:</b> parameter handling rules, a canonical strategy, flattening redirect chains, and a clean faceted-nav design.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="audit-card">
+          <div class="audit-body">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge rounded-pill text-bg-success-subtle text-success-emphasis border border-success-subtle">SaaS</span>
+              <span class="small text-muted-2">Next.js &middot; headless CMS</span>
+            </div>
+            <h3 class="h5 mb-2">Client-side rendering hiding pages from Google</h3>
+            <p class="small text-muted-2 mb-3">Studied what a crawler actually receives vs. what a browser renders on a modern React site.</p>
+            <div class="audit-finding"><i class="bi bi-exclamation-triangle"></i><span>Routes served an <b>empty HTML shell</b> &mdash; content only appeared after JS execution</span></div>
+            <div class="audit-finding"><i class="bi bi-exclamation-triangle"></i><span>No <b>XML sitemap</b> generated, and no server-side canonical tags</span></div>
+            <div class="audit-finding"><i class="bi bi-exclamation-triangle"></i><span>Soft-404 risk on routes that returned <b>200 with no content</b></span></div>
+          </div>
+          <div class="audit-foot">
+            <b>Recommended:</b> SSR/ISR for public routes, automated sitemap generation, correct canonicals in the head, and render testing.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="audit-card">
+          <div class="audit-body">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge rounded-pill text-bg-success-subtle text-success-emphasis border border-success-subtle">Local Service</span>
+              <span class="small text-muted-2">WordPress &middot; multi-location</span>
+            </div>
+            <h3 class="h5 mb-2">Location pages competing with each other</h3>
+            <p class="small text-muted-2 mb-3">Checked whether a multi-location site was cannibalising its own rankings.</p>
+            <div class="audit-finding"><i class="bi bi-exclamation-triangle"></i><span><b>30</b> near-identical location pages with only the city name changed</span></div>
+            <div class="audit-finding"><i class="bi bi-exclamation-triangle"></i><span>Every location had the <b>same single homepage canonical</b> pointing at the main page</span></div>
+            <div class="audit-finding"><i class="bi bi-exclamation-triangle"></i><span>No <b>LocalBusiness</b> schema on any location page</span></div>
+          </div>
+          <div class="audit-foot">
+            <b>Recommended:</b> unique location hub pages, self-referencing canonicals, LocalBusiness schema, and supporting content per area.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="audit-card">
+          <div class="audit-body">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge rounded-pill text-bg-success-subtle text-success-emphasis border border-success-subtle">Blog / Media</span>
+              <span class="small text-muted-2">WordPress &middot; ad-heavy</span>
+            </div>
+            <h3 class="h5 mb-2">Crawl budget wasted on ad and parameter URLs</h3>
+            <p class="small text-muted-2 mb-3">Learned to read log files and see what bots were actually spending their time on.</p>
+            <div class="audit-finding"><i class="bi bi-exclamation-triangle"></i><span><b>91%</b> of bot requests went to ad, share and tracking parameter URLs</span></div>
+            <div class="audit-finding"><i class="bi bi-exclamation-triangle"></i><span><b>INP of 410ms</b> in the field &mdash; heavy ad and chat scripts blocking input</span></div>
+            <div class="audit-finding"><i class="bi bi-exclamation-triangle"></i><span>Below-the-fold images <b>loaded without lazy loading</b></span></div>
+          </div>
+          <div class="audit-foot">
+            <b>Recommended:</b> robots.txt parameter rules, lazy loading and async ad scripts, and prioritising crawl budget for content pages.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-center small text-muted-2 mt-4 mb-0">
+      <i class="bi bi-shield-exclamation me-1"></i>
+      Practice audits on sites I studied independently. No client relationship, no performance claims &mdash;
+      I'm showing my method, not results.
+    </p>
+  </div>
+</section>
+
+<!-- ============================= CLIENT WORK ============================= -->
+<section class="section" id="clients">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-label mb-2">Client work</div>
+      <h2 class="sec-title">Recent Project: Sole Special Foot Care</h2>
+      <p class="lead-muted mx-auto mt-2">
+        A real local-business SEO engagement. I'm documenting the technical state I found and the work carried out,
+        including problems that are still open.
+      </p>
+    </div>
+
+    <div class="client-card">
+      <div class="client-head">
+        <div class="d-flex align-items-center gap-3 flex-wrap">
+          <div class="client-mono">SS</div>
+          <div class="flex-grow-1">
+            <h3 class="h4 mb-1">Sole Special Foot Care, LLC</h3>
+            <div class="small text-muted-2">Nurse-led mobile foot care &middot; Conroe, Texas, USA</div>
+          </div>
+          <span class="badge rounded-pill text-bg-success-subtle text-success-emphasis border border-success-subtle">
+            <i class="bi bi-patch-check me-1"></i>SEO engagement
+          </span>
+        </div>
+        <div class="client-meta">
+          <span class="client-chip"><i class="bi bi-heart-pulse me-1"></i>Healthcare &middot; Mobile Nursing</span>
+          <span class="client-chip"><i class="bi bi-geo-alt me-1"></i>Conroe, TX</span>
+          <span class="client-chip"><i class="bi bi-briefcase me-1"></i>Role: SEO only (not development)</span>
+          <span class="client-chip"><i class="bi bi-hdd me-1"></i>WordPress</span>
+        </div>
+      </div>
+
+      <div class="client-body">
+        <div class="row g-4">
+          <!-- left: business + scope -->
+          <div class="col-lg-5">
+            <div class="client-sub"><i class="bi bi-building"></i>The business</div>
+            <p class="small text-muted-2 mb-4">
+              Sole Special Foot Care is a Texas clinical practice that brings foot care to patients in their own homes
+              instead of a clinic. The service is run by a Registered Nurse and Certified Foot Care Specialist
+              and focuses on seniors and people living with diabetes &mdash; foot assessments, diabetic foot care,
+              wound monitoring, nail care and callus reduction. Because there is no walk-in location, almost all of
+              their demand has to come from search, which makes local SEO the whole game for them.
+            </p>
+
+            <div class="client-sub"><i class="bi bi-list-check"></i>Scope of my SEO work</div>
+            <!--
+              EDIT: make these specific to what you actually did for this client.
+              These are the service categories, not results. Replace with your real tasks.
+            -->
+            <ul class="client-scope mb-0 ps-0">
+              <li>On-page optimisation across the core service and location pages</li>
+              <li>Service-area SEO for their coverage towns in the Houston area</li>
+              <li>Local &amp; medical structured data (LocalBusiness / MedicalBusiness)</li>
+              <li>Technical review: indexation, duplicate URLs, redirects and canonicals</li>
+              <li>Content and internal linking between service and location pages</li>
+              <li>Documentation of findings in a written, prioritised report</li>
+            </ul>
+          </div>
+
+          <!-- right: findings -->
+          <div class="col-lg-7">
+            <div class="client-sub"><i class="bi bi-clipboard2-data"></i>Key technical findings</div>
+            <div class="d-grid gap-2 mb-3">
+
+              <div class="finding high">
+                <div class="f-head">
+                  <span class="f-sev">HIGH</span>
+                  <h6>Live duplicate page competing with the homepage</h6>
+                </div>
+                <p>
+                  A staging URL is indexed and reachable alongside the real homepage:
+                  <code>/drafthomepage/</code>. Two indexable URLs for the same page splits link signals and can
+                  cause the two to compete for the same keywords. Fix: delete it, or 301 it to the homepage
+                  and noindex it until removal propagates.
+                </p>
+              </div>
+
+              <div class="finding med">
+                <div class="f-head">
+                  <span class="f-sev">MEDIUM</span>
+                  <h6>Service-area pages need canonical and schema review</h6>
+                </div>
+                <p>
+                  The site targets multiple towns (Conroe, Huntsville, Humble, Tomball). Multi-location sites often
+                  point every location page at the homepage canonical, which tells Google none of them are the
+                  authoritative version. Fix: self-referencing canonicals, consistent NAP, and genuinely distinct
+                  content per area &mdash; near-identical location pages risk being treated as doorway pages.
+                </p>
+              </div>
+
+              <div class="finding high">
+                <div class="f-head">
+                  <span class="f-sev">HIGH</span>
+                  <h6>Site is currently offline</h6>
+                </div>
+                <p>
+                  At the time of this review the domain resolved (Hostinger, <code>88.223.84.85</code>) but refused
+                  connections on ports 80 and 443, so the site could not be crawled at all. While it is down it
+                  cannot rank, cannot be indexed, and generates no enquiries. Flagged to the client as the
+                  highest-priority item &mdash; a hosting or account issue, not an SEO one.
+                </p>
+              </div>
+
+              <div class="finding good">
+                <div class="f-head">
+                  <span class="f-sev">STRENGTH</span>
+                  <h6>Clear service-area structure already in place</h6>
+                </div>
+                <p>
+                  Having a dedicated page per coverage town is the right foundation for local search and is the
+                  hardest part to retrofit later. The gap is not the structure &mdash; it is making each page
+                  unique and pointing canonicals correctly.
+                </p>
+              </div>
+            </div>
+
+            <div class="status-bar">
+              <i class="bi bi-exclamation-triangle-fill"></i>
+              <div>
+                <strong>Review note:</strong> the site was offline when I ran this review, so the findings above
+                come from search-index data and a direct reachability check rather than a full crawl. I have not
+                claimed ranking or traffic outcomes, and none are shown here.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-center small text-muted-2 mt-4 mb-0">
+      <i class="bi bi-info-circle me-1"></i>
+      Happy to provide a detailed anonymised version of this audit on request.
+    </p>
+  </div>
+</section>
+
+<!-- ============================= PROCESS ============================= -->
+<section class="section" id="process">
+  <div class="container">
+    <div class="row g-5 align-items-start">
+      <div class="col-lg-5">
+        <div class="section-label mb-2">How I work</div>
+        <h2 class="sec-title mb-3">Simple and Transparent</h2>
+        <p class="lead-muted mb-4">No black boxes and no jargon I can't explain. You'll know what I checked, what I found, and what I'm unsure about.</p>
+        <div class="card-clean p-4">
+          <div class="d-flex gap-3">
+            <div class="icon-box"><i class="bi bi-clock-history"></i></div>
+            <div>
+              <div class="fw-bold">Turnaround</div>
+              <div class="small text-muted-2">Small site audits delivered in 3–5 working days. First review is free.</div>
+            </div>
+          </div>
+        </div>
+        <a href="#contact" class="btn btn-brand w-100 mt-3 mt-lg-0 mt-xl-3"><i class="bi bi-chat-dots me-2"></i>Send me your website</a>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="step" data-n="1">
+          <h3 class="h5 mb-1">Free quick review</h3>
+          <p class="small text-muted-2 mb-0">You share the URL. I run a quick crawl and send back the 3 most obvious issues at no cost.</p>
+        </div>
+        <div class="step" data-n="2">
+          <h3 class="h5 mb-1">Full crawl &amp; audit</h3>
+          <p class="small text-muted-2 mb-0">Crawl every URL, check status codes, redirects, canonicals, metadata and speed &mdash; cross-verified in two tools.</p>
+        </div>
+        <div class="step" data-n="3">
+          <h3 class="h5 mb-1">Prioritised fix list</h3>
+          <p class="small text-muted-2 mb-0">Each issue ranked by impact and effort, written in plain English with a suggested fix your developer can follow.</p>
+        </div>
+        <div class="step" data-n="4">
+          <h3 class="h5 mb-1">Implementation help</h3>
+          <p class="small text-muted-2 mb-0">I can make small changes myself, or write clear tickets if you have your own developer or builder.</p>
+        </div>
+        <div class="step" data-n="5">
+          <h3 class="h5 mb-1">Re-check after launch</h3>
+          <p class="small text-muted-2 mb-0">Once fixes go live I re-crawl to confirm the issues are actually resolved, and note anything still outstanding.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= FEEDBACK ============================= -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-label mb-2">Feedback</div>
+      <h2 class="sec-title">What My Mentors Have Said</h2>
+      <p class="lead-muted mx-auto mt-2">From my training period and course work &mdash; not paying clients. Replace these with your own real references as you build experience.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card-clean hoverable h-100 p-4">
+          <div class="stars mb-2">★★★★★</div>
+          <p class="small text-muted-2">"Understands crawl concepts faster than most people I've trained. Asks the right questions and doesn't guess when something is outside what he knows yet."</p>
+          <div class="d-flex align-items-center gap-2 mt-3">
+            <div class="avatar-wrap">
+              <div class="avatar-initials" style="width:46px;height:46px;font-size:.9rem">IM</div>
+              <img class="avatar-photo" src="img/client-1.jpg" alt="Portrait photo of my course instructor" width="46" height="46" loading="lazy" decoding="async">
+            </div>
+            <div><div class="fw-bold small">Course Instructor</div><div class="small text-muted-2">Emmanuel John Institute</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-clean hoverable h-100 p-4">
+          <div class="stars mb-2">★★★★☆</div>
+          <p class="small text-muted-2">"Takes the technical side of SEO seriously, which is rare at this stage. His practice audits are properly documented with evidence behind every point."</p>
+          <div class="d-flex align-items-center gap-2 mt-3">
+            <div class="avatar-wrap">
+              <div class="avatar-initials" style="width:46px;height:46px;font-size:.9rem">SK</div>
+              <img class="avatar-photo" src="img/client-2.jpg" alt="Portrait photo of my study group partner" width="46" height="46" loading="lazy" decoding="async">
+            </div>
+            <div><div class="fw-bold small">Study Group Peer</div><div class="small text-muted-2">Programming course</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-clean hoverable h-100 p-4">
+          <div class="stars mb-2">★★★★★</div>
+          <p class="small text-muted-2">"Handed me a 6-page audit of my small business site. It was clearer and more useful than the report I paid an agency for. Clearly still early, but the work is honest and well organised."</p>
+          <div class="d-flex align-items-center gap-2 mt-3">
+            <div class="avatar-wrap">
+              <div class="avatar-initials" style="width:46px;height:46px;font-size:.9rem">PN</div>
+              <img class="avatar-photo" src="img/client-3.jpg" alt="Portrait photo of a small business owner" width="46" height="46" loading="lazy" decoding="async">
+            </div>
+            <div><div class="fw-bold small">Small Business Owner</div><div class="small text-muted-2">Free audit recipient</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= RESUME ============================= -->
+<section class="section" id="resume">
+  <div class="container">
+    <div class="text-center mb-4 no-print">
+      <div class="section-label mb-2">Credentials</div>
+      <h2 class="sec-title">My Resume</h2>
+      <p class="lead-muted mx-auto mt-2">Written to reflect where I actually am right now &mdash; in training, early in my SEO career, and open to junior roles and freelance audits.</p>
+    </div>
+
+    <div class="d-flex flex-wrap justify-content-center gap-2 mb-4 no-print">
+      <button class="btn btn-brand" data-print-resume><i class="bi bi-file-earmark-arrow-down me-2"></i>Download Resume (PDF)</button>
+      <a class="btn btn-outline-ink" href="#contact"><i class="bi bi-envelope me-2"></i>Ask for a full CV</a>
+      <button class="btn btn-outline-ink" id="copyEmail"><i class="bi bi-link-45deg me-2"></i>Copy my email</button>
+    </div>
+
+    <div class="resume-shell">
+      <div class="resume-bar no-print">
+        <div class="d-flex align-items-center gap-2 small text-muted-2">
+          <i class="bi bi-file-earmark-pdf text-danger fs-5"></i>
+          <span><strong class="text-body">Peter_Plaza_Resume.pdf</strong> &middot; A4 &middot; 1–2 pages</span>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <button class="btn btn-sm btn-outline-ink" data-print-resume><i class="bi bi-printer me-1"></i>Print / Save as PDF</button>
+          <a class="btn btn-sm btn-brand" href="#contact">Contact me</a>
+        </div>
+      </div>
+
+      <!-- ====== THE ACTUAL RESUME (this is what prints) ====== -->
+      <div class="resume-paper" id="resumePaper">
+
+        <!-- print-only header strip -->
+        <div class="print-only">
+          Junior Technical SEO &amp; Website Optimization &nbsp;|&nbsp; fututana@gmail.com &nbsp;|&nbsp; +63 921 364 5286 &nbsp;|&nbsp; References available on request
+        </div>
+
+        <div class="resume-head">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:1rem">
+            <div style="flex:1 1 auto">
+              <h3>PETER PLAZA</h3>
+              <div class="r-date" style="font-size:.95rem">Junior Technical SEO &amp; Website Optimization Specialist</div>
+              <div class="resume-contact">
+                <span><i class="bi bi-geo-alt-fill"></i> Philippines</span>
+                <span><i class="bi bi-envelope-fill"></i> fututana@gmail.com</span>
+                <span><i class="bi bi-telephone-fill"></i> +63 921 364 5286</span>
+              </div>
+            </div>
+            <img src="img/peter-plaza.jpg" alt="Peter Plaza" width="76" height="76"
+                 style="width:76px;height:76px;border-radius:50%;object-fit:cover;flex:0 0 auto;border:2px solid #0f766e">
+          </div>
+        </div>
+
+        <div class="resume-grid">
+
+          <!-- ---------- LEFT COLUMN ---------- -->
+          <div>
+            <div class="r-block">
+              <div class="r-title">Profile</div>
+              <p style="font-size:.83rem;color:#334155;margin:0">
+                Junior Technical SEO specialist currently completing a vocational course in Programming
+                (Science &amp; Technology) at <strong>Emmanuel John Institute</strong>. I am building a career in
+                technical SEO with a focus on website speed, crawl and indexation, and site structure.
+                I learn by doing: I run practice audits on real sites, document every finding with evidence,
+                and explain the fix in plain English. Looking for a junior SEO role, internship, or small
+                freelance audit projects to grow into full-time work.
+              </p>
+            </div>
+
+            <div class="r-block">
+              <div class="r-title">Skills</div>
+              <div class="r-skill"><span>Technical site auditing</span><span>Working</span></div>
+              <div class="r-skillbar"><i style="width:72%"></i></div>
+              <div class="r-skill"><span>Page speed diagnosis</span><span>Working</span></div>
+              <div class="r-skillbar"><i style="width:68%"></i></div>
+              <div class="r-skill"><span>On-page SEO</span><span>Working</span></div>
+              <div class="r-skillbar"><i style="width:75%"></i></div>
+              <div class="r-skill"><span>Schema &amp; structured data</span><span>Familiar</span></div>
+              <div class="r-skillbar"><i style="width:60%"></i></div>
+              <div class="r-skill"><span>Site structure &amp; internal links</span><span>Familiar</span></div>
+              <div class="r-skillbar"><i style="width:62%"></i></div>
+              <div class="r-skill"><span>GA4 &amp; Search Console</span><span>Working</span></div>
+              <div class="r-skillbar"><i style="width:66%"></i></div>
+              <div class="r-skill"><span>Log file reading</span><span>Learning</span></div>
+              <div class="r-skillbar"><i style="width:45%"></i></div>
+              <div class="r-skill"><span>HTML &amp; CSS (from course)</span><span>Working</span></div>
+              <div class="r-skillbar"><i style="width:70%"></i></div>
+              <div class="r-skill"><span>JavaScript basics</span><span>Learning</span></div>
+              <div class="r-skillbar"><i style="width:48%"></i></div>
+            </div>
+
+            <div class="r-block">
+              <div class="r-title">Tools I Use</div>
+              <div class="r-chips">
+                <span class="r-chip">Google Search Console</span>
+                <span class="r-chip">GA4</span>
+                <span class="r-chip">PageSpeed Insights</span>
+                <span class="r-chip">Lighthouse</span>
+                <span class="r-chip">Screaming Frog</span>
+                <span class="r-chip">Chrome DevTools</span>
+                <span class="r-chip">Rich Results Test</span>
+                <span class="r-chip">Schema Validator</span>
+                <span class="r-chip">W3C Validator</span>
+              </div>
+              <div class="r-title" style="margin-top:.8rem">Tools I'm Learning</div>
+              <div class="r-chips">
+                <span class="r-chip learning">Ahrefs</span>
+                <span class="r-chip learning">Semrush</span>
+                <span class="r-chip learning">Sitebulb</span>
+                <span class="r-chip learning">WebPageTest</span>
+                <span class="r-chip learning">CrUX</span>
+                <span class="r-chip learning">Log File Analyser</span>
+                <span class="r-chip learning">Looker Studio</span>
+              </div>
+            </div>
+
+            <div class="r-block">
+              <div class="r-title">Education</div>
+              <div class="r-item">
+                <h6>Vocational Course in Programming</h6>
+                <div class="r-date">Emmanuel John Institute &middot; 2025 — Present (in progress)</div>
+                <p>Science &amp; Technology stream, programming track. Currently studying.</p>
+              </div>
+              <div class="r-note">
+                Course not yet completed &mdash; expected to finish in 2026.
+              </div>
+              <div class="r-item" style="margin-top:.7rem">
+                <h6>Secondary Education (School)</h6>
+                <div class="r-date">School Name &middot; Year of passing</div>
+              </div>
+            </div>
+
+            <div class="r-block">
+              <div class="r-title">Courses &amp; Certifications</div>
+              <ul style="font-size:.83rem;color:#334155;margin:0;padding-left:1.05rem">
+                <li>Google Analytics 4 — <em>Add only if completed</em></li>
+                <li>SEO Fundamentals — <em>Add only if completed</em></li>
+                <li>Screaming Frog Training — <em>Add only if completed</em></li>
+                <li>Ahrefs / Semrush tutorials — <em>Add only if completed</em></li>
+              </ul>
+              <div class="r-note">
+                Delete this block or list only courses you have actually finished. Listing unfinished
+                courses is the fastest way to lose trust in an interview.
+              </div>
+            </div>
+          </div>
+
+          <!-- ---------- RIGHT COLUMN ---------- -->
+          <div>
+            <div class="r-block">
+              <div class="r-title">What I'm Working On</div>
+
+              <div class="r-item">
+                <h6>Independent Practice &mdash; Technical SEO Audits</h6>
+                <div class="r-date">Self-initiated &middot; 2025 — Present</div>
+                <ul>
+                  <li>Run full technical audits on live websites to build hands-on experience across e-commerce, SaaS, local and publishing sites.</li>
+                  <li>Document every finding with evidence: crawl exports, screenshots, field data and validator output &mdash; never a number without a source.</li>
+                  <li>Practice areas include duplicate URL handling, redirect chains, canonical strategy, faceted navigation, crawl budget and Core Web Vitals.</li>
+                  <li>Write findings as prioritised fix lists with impact and effort, in language a non-technical owner can act on.</li>
+                </ul>
+              </div>
+
+              <div class="r-item">
+                <h6>Self-Directed SEO Study</h6>
+                <div class="r-date">Ongoing</div>
+                <ul>
+                  <li>Studying technical SEO through official Google documentation and structured course material.</li>
+                  <li>Reading up on indexation, JavaScript SEO, structured data and web performance fundamentals.</li>
+                  <li>Cross-verifying every finding in at least two tools before reporting it.</li>
+                </ul>
+              </div>
+
+              <div class="r-item">
+                <h6>Free Audit Work</h6>
+                <div class="r-date">Small business owners &middot; 2025 — Present</div>
+                <ul>
+                  <li>Provided free initial technical reviews to small business owners in exchange for practical experience and honest feedback.</li>
+                  <li>Delivered written audit reports with clear, prioritised recommendations.</li>
+                </ul>
+              </div>
+
+              <div class="r-item">
+                <h6>SEO Project &mdash; Sole Special Foot Care, LLC</h6>
+                <div class="r-date">Local healthcare business &middot; Conroe, Texas, USA</div>
+                <ul>
+                  <li>Handled the <strong>SEO only</strong> on a WordPress site for a nurse-led mobile foot care business (development handled by their own web team).</li>
+                  <li>Reviewed on-page elements across core service and service-area pages covering multiple Houston-area towns.</li>
+                  <li>Documented a live staging duplicate URL <code>/drafthomepage/</code> competing with the homepage, and recommended a 301 / noindex fix.</li>
+                  <li>Reviewed canonical handling across location pages, where self-referencing canonicals were needed to avoid every page deferring to the homepage.</li>
+                  <li>Advised on LocalBusiness / MedicalBusiness structured data with consistent NAP details.</li>
+                  <li>Escalated a critical availability issue: the site was unreachable on ports 80 and 443 during review, blocking all crawling and organic visibility.</li>
+                </ul>
+                <div class="r-note">
+                  Findings recorded in a written report. No ranking or traffic outcomes claimed &mdash;
+                  the site was offline at the point of review.
+                </div>
+              </div>
+            </div>
+
+            <div class="r-block">
+              <div class="r-title">Practice Audit Highlights</div>
+              <div class="r-note" style="margin:0 0 .6rem 0">
+                Self-initiated practice work — no client relationship, no performance results claimed.
+              </div>
+
+              <div class="r-item">
+                <h6>E-commerce site &mdash; duplicate URL &amp; crawl budget</h6>
+                <ul>
+                  <li>Identified 4,200+ duplicate product URLs caused by filter and sort parameters.</li>
+                  <li>Mapped 38 redirect chains, some 4+ hops, and missing canonicals across collection pages.</li>
+                  <li>Recommended parameter handling rules and a canonical strategy.</li>
+                </ul>
+              </div>
+
+              <div class="r-item">
+                <h6>Headless SaaS site &mdash; indexation</h6>
+                <ul>
+                  <li>Found routes serving an empty HTML shell, with content only appearing after JavaScript ran.</li>
+                  <li>Confirmed no XML sitemap and incorrect canonical tags; identified soft-404 risk.</li>
+                  <li>Recommended SSR/ISR and automated sitemap generation.</li>
+                </ul>
+              </div>
+
+              <div class="r-item">
+                <h6>Local business site &mdash; page cannibalisation</h6>
+                <ul>
+                  <li>Found 30 near-identical location pages competing with each other.</li>
+                  <li>Flagged homepage canonicals applied to every location page, and missing LocalBusiness schema.</li>
+                  <li>Recommended unique location hubs with self-referencing canonicals.</li>
+                </ul>
+              </div>
+
+              <div class="r-item">
+                <h6>Publishing site &mdash; crawl budget &amp; performance</h6>
+                <ul>
+                  <li>Log file review showed 91% of bot requests hitting ad and tracking parameter URLs.</li>
+                  <li>Measured INP of 410ms in the field; recommended async scripts and lazy loading.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="r-block">
+              <div class="r-title">What I'm Looking For</div>
+              <ul style="font-size:.83rem;color:#334155;margin:0;padding-left:1.05rem">
+                <li>Junior SEO role or internship where I can learn from an experienced SEO team</li>
+                <li>Small freelance audit projects to build a client portfolio</li>
+                <li>Remote or hybrid &mdash; available part-time around my course schedule</li>
+                <li>Long-term commitment &mdash; I want to grow into a full-time SEO career, not freelance one-offs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= FAQ ============================= -->
+<section class="section section-alt" id="faq">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="section-label mb-2">FAQ</div>
+        <h2 class="sec-title mb-3">Questions Clients Ask Most</h2>
+        <p class="lead-muted">Still have a question? <a href="#contact" class="text-decoration-none" style="color:var(--brand);font-weight:600">Send me a message</a> &mdash; I reply within one business day.</p>
+      </div>
+      <div class="col-lg-8">
+        <div class="accordion" id="faqAcc">
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q1">You say you're junior &mdash; why work with you?</button></h2>
+            <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+              <div class="accordion-body">Because you'd be getting a thorough job at a price that reflects my experience level, not a senior's rate. I do the careful groundwork properly: full crawls, evidence behind every finding, and a written report you can hand to a developer. I won't have answers I haven't learned yet &mdash; and when I'm unsure, I'll tell you and go find out rather than guess.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q2">What does a technical SEO audit include?</button></h2>
+            <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+              <div class="accordion-body">A full site crawl, index and status code review, redirect and canonical checks, metadata and heading review, Core Web Vitals analysis, mobile usability, basic schema checks, and a prioritised fix sheet ranking each issue by impact and effort.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q3">How much does it cost?</button></h2>
+            <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+              <div class="accordion-body">The first review is free. After that I quote a fixed price based on how many pages your site has &mdash; small sites are inexpensive, and I'll tell you honestly if I think a cheaper option makes more sense than hiring me. You get one clear price before any work starts, with no hourly surprises.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q4">Can you actually make the changes, or just tell me what's wrong?</button></h2>
+            <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+              <div class="accordion-body">Both, depending on your setup. On WordPress and simple sites I can handle small fixes directly. On custom or headless builds I'll write clear tickets with screenshots and exact instructions for your developer, then re-check once the changes are live.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q5">How long before I see results?</button></h2>
+            <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+              <div class="accordion-body">Speed and usability fixes can show within 2–4 weeks. Indexation and structure fixes usually need 6–12 weeks because Google has to recrawl. I'll give you an honest timeline for your specific site rather than a guaranteed number, since I can't promise outcomes that aren't in my control.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q6">Which platforms do you work on?</button></h2>
+            <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+              <div class="accordion-body">WordPress and WooCommerce most often, plus Shopify, Webflow and simple headless sites. I'm still building depth on larger custom builds, and I'll say so if your site is outside what I'm confident handling yet rather than take it on and guess.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= CONTACT ============================= -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-label mb-2">Contact</div>
+      <h2 class="sec-title">Let's Look At Your Website</h2>
+      <p class="lead-muted mx-auto mt-2">Share your URL and I'll send back a free initial review with the top 3 issues I can find.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="d-grid gap-3">
+          <a class="contact-tile text-decoration-none" href="mailto:fututana@gmail.com">
+            <div class="icon-box"><i class="bi bi-envelope"></i></div>
+            <div><div class="lbl">Email</div><div class="fw-bold small text-body">fututana@gmail.com</div></div>
+          </a>
+          <a class="contact-tile text-decoration-none" href="tel:+639213645286">
+            <div class="icon-box"><i class="bi bi-telephone"></i></div>
+            <div><div class="lbl">Phone / WhatsApp</div><div class="fw-bold small text-body">+63 921 364 5286</div></div>
+          </a>
+          <div class="contact-tile">
+            <div class="icon-box"><i class="bi bi-geo-alt"></i></div>
+            <div><div class="lbl">Based in</div><div class="fw-bold small text-body">Philippines (Remote worldwide)</div></div>
+          </div>
+          <div class="card-clean p-4">
+            <div class="d-flex gap-2 align-items-center mb-2"><i class="bi bi-clock text-success"></i><strong class="small">Response time</strong></div>
+            <p class="small text-muted-2 mb-0">I reply to every message within one business day. Free initial reviews are usually turned around in 48 hours, around my course schedule.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="card-clean p-4 p-lg-5">
+          <!--
+            FORM: paste your Formspree / Getform / Web3Forms endpoint in `action`.
+            Leave it as-is to fall back to opening the visitor's email app.
+          -->
+          <form id="contactForm" action="#" method="POST" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label small fw-semibold" for="cname">Your name</label>
+                <input class="form-control" type="text" id="cname" name="name" placeholder="Jane Doe" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small fw-semibold" for="cemail">Email</label>
+                <input class="form-control" type="email" id="cemail" name="email" placeholder="jane@company.com" required>
+              </div>
+              <div class="col-12">
+                <label class="form-label small fw-semibold" for="curl">Website URL</label>
+                <input class="form-control" type="url" id="curl" name="url" placeholder="https://yourwebsite.com" required>
+              </div>
+              <div class="col-12">
+                <label class="form-label small fw-semibold" for="cservice">What do you need?</label>
+                <select class="form-select" id="cservice" name="service">
+                  <option>Free initial technical review</option>
+                  <option>Full technical SEO audit</option>
+                  <option>Speed &amp; Core Web Vitals review</option>
+                  <option>Schema / structured data help</option>
+                  <option>On-page SEO check</option>
+                  <option>GA4 &amp; Search Console setup</option>
+                  <option>Something else</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label small fw-semibold" for="cmsg">Project details</label>
+                <textarea class="form-control" id="cmsg" name="message" rows="4" placeholder="How many pages does your site have, what are you hoping to fix, and is there a deadline?"></textarea>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="cnews" name="newsletter">
+                  <label class="form-check-label small text-muted-2" for="cnews">Send me occasional SEO learning notes. No spam.</label>
+                </div>
+              </div>
+              <div class="col-12 d-grid">
+                <button class="btn btn-brand" type="submit" id="submitBtn">
+                  <i class="bi bi-send me-2"></i>Request My Free Review
+                </button>
+              </div>
+            </div>
+            <div class="alert mt-3 mb-0 d-none" id="formAlert" role="alert"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= FOOTER ============================= -->
+<footer>
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-5">
+        <div class="d-flex align-items-center gap-2 mb-2">
+          <span class="brand-dot"><i class="bi bi-graph-up-arrow"></i></span>
+          <span class="fw-bold" style="font-family:'Plus Jakarta Sans'">Peter Plaza</span>
+        </div>
+        <p class="small text-muted-2 mb-0" style="max-width:400px">
+          Junior Technical SEO &amp; website optimization specialist. Currently in a vocational programming course,
+          building real skills through hands-on audits and honest documentation.
+        </p>
+      </div>
+      <div class="col-lg-4">
+        <div class="d-flex flex-wrap gap-3 small">
+          <a class="text-muted-2 text-decoration-none" href="#services">Services</a>
+          <a class="text-muted-2 text-decoration-none" href="#tools">Tools</a>
+          <a class="text-muted-2 text-decoration-none" href="#audits">Practice Work</a>
+          <a class="text-muted-2 text-decoration-none" href="#clients">Client Work</a>
+          <a class="text-muted-2 text-decoration-none" href="#resume">Resume</a>
+          <a class="text-muted-2 text-decoration-none" href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="d-flex gap-2 justify-content-lg-end">
+          <a class="social-btn" href="mailto:fututana@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+          <a class="social-btn" href="tel:+639213645286" aria-label="Phone"><i class="bi bi-telephone"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="my-4" style="border-color:var(--line)">
+    <div class="d-flex flex-wrap justify-content-between gap-2 small text-muted-2">
+      <span>© <span id="year"></span> Peter Plaza. All rights reserved.</span>
+      <span>Built with clean HTML, Bootstrap 5 &amp; zero tracking scripts.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button class="btn btn-brand no-print position-fixed" id="toTop" style="right:18px;bottom:18px;width:46px;height:46px;padding:0;border-radius:14px;opacity:0;pointer-events:none;transition:.3s;z-index:1040" aria-label="Back to top">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+/* ================= THEME TOGGLE ================= */
+(function(){
+  const root = document.documentElement, btn = document.getElementById('themeToggle');
+  const saved = localStorage.getItem('tseo-theme');
+  if(saved) root.setAttribute('data-bs-theme', saved);
+  const icon = () => btn.querySelector('i').className = (root.getAttribute('data-bs-theme')==='dark' ? 'bi bi-sun' : 'bi bi-moon-stars');
+  icon();
+  btn.addEventListener('click', ()=>{
+    const next = root.getAttribute('data-bs-theme')==='dark' ? 'light' : 'dark';
+    root.setAttribute('data-bs-theme', next);
+    localStorage.setItem('tseo-theme', next);
+    icon();
+  });
+})();
+
+/* ================= ANIMATED COUNTERS ================= */
+(function(){
+  const els = document.querySelectorAll('.count');
+  const run = el => {
+    const target = +el.dataset.target; let cur = 0;
+    const step = Math.max(1, Math.ceil(target/38));
+    const t = setInterval(()=>{
+      cur += step;
+      if(cur >= target){ cur = target; clearInterval(t); }
+      el.textContent = cur;
+    }, 28);
+  };
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ run(e.target); io.unobserve(e.target);} });
+  },{threshold:.4});
+  els.forEach(el=>io.observe(el));
+})();
+
+/* ================= TOOL FILTER ================= */
+(function(){
+  const btns = document.querySelectorAll('#toolFilters .filter-pill');
+  const items = document.querySelectorAll('#toolGrid > [data-cat]');
+  btns.forEach(b=>b.addEventListener('click',()=>{
+    btns.forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    const f = b.dataset.filter;
+    items.forEach(it=>{
+      it.classList.toggle('hide', !(f==='all' || it.dataset.cat===f));
+    });
+  }));
+})();
+
+/* ================= SCROLLSPY + SMOOTH NAV ================= */
+(function(){
+  const links = [...document.querySelectorAll('.nav-link')];
+  const secs  = links.map(l=>document.querySelector(l.getAttribute('href'))).filter(Boolean);
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        links.forEach(l=>l.classList.toggle('active', l.getAttribute('href')==='#'+e.target.id));
+      }
+    });
+  },{rootMargin:'-45% 0px -50% 0px'});
+  secs.forEach(s=>io.observe(s));
+
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', ev=>{
+      const id = a.getAttribute('href');
+      if(id.length < 2) return;
+      const el = document.querySelector(id);
+      if(!el) return;
+      ev.preventDefault();
+      el.scrollIntoView({behavior:'smooth', block:'start'});
+      const menu = document.getElementById('navMenu');
+      if(menu && menu.classList.contains('show')) bootstrap.Collapse.getOrCreateInstance(menu).hide();
+    });
+  });
+})();
+
+/* ================= BACK TO TOP ================= */
+(function(){
+  const b = document.getElementById('toTop');
+  window.addEventListener('scroll', ()=>{
+    const on = window.scrollY > 500;
+    b.style.opacity = on ? '1' : '0';
+    b.style.pointerEvents = on ? 'auto' : 'none';
+  }, {passive:true});
+  b.addEventListener('click', ()=>window.scrollTo({top:0,behavior:'smooth'}));
+})();
+
+/* ================= DOWNLOAD RESUME (print to PDF) =================
+   Opens the browser print dialog with a resume-only print stylesheet.
+   Users choose "Save as PDF" as the destination.
+================================================================ */
+(function(){
+  const originalTitle = document.title;
+  document.querySelectorAll('[data-print-resume]').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      document.title = 'Peter_Plaza_Resume';
+      const restore = ()=>{
+        document.title = originalTitle;
+        window.removeEventListener('afterprint', restore);
+      };
+      window.addEventListener('afterprint', restore);
+      setTimeout(()=>window.print(), 120);
+    });
+  });
+})();
+
+/* ================= COPY EMAIL ================= */
+(function(){
+  const b = document.getElementById('copyEmail');
+  if(!b) return;
+  b.addEventListener('click', async ()=>{
+    const email = 'fututana@gmail.com';
+    try{ await navigator.clipboard.writeText(email); }
+    catch(_){ const ta=document.createElement('textarea'); ta.value=email; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove(); }
+    const i = b.querySelector('i');
+    const txt = b.childNodes[b.childNodes.length-1];
+    const oldI = i.className, oldT = txt.nodeValue;
+    i.className = 'bi bi-check2 me-2';
+    txt.nodeValue = ' Copied!';
+    setTimeout(()=>{ i.className = oldI; txt.nodeValue = oldT; }, 1800);
+  });
+})();
+
+/* ================= CONTACT FORM ================= */
+(function(){
+  const form = document.getElementById('contactForm');
+  const alertBox = document.getElementById('formAlert');
+  const btn = document.getElementById('submitBtn');
+  const show = (type, msg) => {
+    alertBox.className = 'alert mt-3 mb-0 alert-' + type;
+    alertBox.innerHTML = msg;
+  };
+  form.addEventListener('submit', ev=>{
+    if(form.getAttribute('action') === '#'){
+      ev.preventDefault();
+      if(!form.checkValidity()){ form.classList.add('was-validated'); show('warning','Please fill in your name, email and website URL.'); return; }
+      const name = document.getElementById('cname').value.trim();
+      const email = document.getElementById('cemail').value.trim();
+      const url = document.getElementById('curl').value.trim();
+      const service = document.getElementById('cservice').value;
+      const msg = document.getElementById('cmsg').value.trim();
+      const body = `Name: ${name}\nEmail: ${email}\nWebsite: ${url}\nService: ${service}\n\n${msg}`;
+      window.location.href = `mailto:fututana@gmail.com?subject=${encodeURIComponent('Free SEO Review Request — '+url)}&body=${encodeURIComponent(body)}`;
+      show('success','<i class="bi bi-envelope-check me-1"></i> Your email app should open now with the details filled in. Prefer to write directly? Use <strong>fututana@gmail.com</strong>.');
+      return;
+    }
+    ev.preventDefault();
+    btn.disabled = true; btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Sending…';
+    fetch(form.action, {method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}})
+      .then(r => { if(!r.ok) throw new Error(); form.reset(); show('success','<i class="bi bi-check-circle me-1"></i> Thanks! Your request is in — I\'ll reply within one business day.'); })
+      .catch(()=> show('danger','Something went wrong. Please email fututana@gmail.com directly.'))
+      .finally(()=>{ btn.disabled=false; btn.innerHTML='<i class="bi bi-send me-2"></i>Request My Free Review'; });
+  });
+})();
+
+/* ================= AVATAR FALLBACK =================
+   If a portrait image is missing or fails to load, the initials
+   badge underneath stays visible instead of a broken-image icon.
+==================================================== */
+(function(){
+  document.querySelectorAll('.avatar-photo').forEach(img=>{
+    const done = ()=> img.setAttribute('data-loaded','1');
+    if(img.complete && img.naturalWidth > 0){ done(); return; }
+    img.addEventListener('load', done);
+    img.addEventListener('error', ()=> img.remove(), {once:true});
+  });
+})();
+
+/* ================= MISC ================= */
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* small pulsing dot for the availability badge */
+const s = document.createElement('style');
+s.textContent = '.pulse-dot{width:8px;height:8px;border-radius:50%;background:#10b981;display:inline-block;box-shadow:0 0 0 0 rgba(16,185,129,.6);animation:pulse 2s infinite;}@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(16,185,129,0)}100%{box-shadow:0 0 0 0 rgba(16,185,129,0)}}';
+document.head.appendChild(s);
+</script>
+
+<!-- Structured data: helps you rank for your own name -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Peter Plaza",
+  "jobTitle":"Junior Technical SEO & Website Optimization Specialist",
+  "description":"Junior Technical SEO specialist and vocational programming student at Emmanuel John Institute. Focuses on website speed, crawl and indexation, site structure and schema markup.",
+  "email":"mailto:fututana@gmail.com",
+  "telephone":"+63-921-364-5286",
+  "alumniOf":{"@type":"EducationalOrganization","name":"Emmanuel John Institute"},
+  "knowsAbout":["Technical SEO","Website Speed","Core Web Vitals","Crawl & Indexation","Schema Markup","On-Page SEO"]
+}
+</script>
+
+</body>
+</html>
